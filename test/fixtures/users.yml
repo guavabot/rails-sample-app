@@ -4,6 +4,7 @@ miguel:
   name: Miguel Ito
   email: miguelito@example.com
   password_digest: <%= User.digest('password') %>
+  admin: true
 
 samuel:
   name: Samue Lin
