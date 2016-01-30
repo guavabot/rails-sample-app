@@ -1,0 +1,8 @@
+App Gang
+========
+
+Why, hello <%= @user.name %>!
+
+Welcome to the App Gang! Open the link below to complete your initiation.
+
+<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
