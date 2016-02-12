@@ -70,6 +70,11 @@ class User < ActiveRecord::Base
     BCrypt::Password.new(digest).is_password?(token)
   end
 
+  # Gets the feed of tweets for a user
+  def feed
+    Tweet.where('user_id = ?', id)
+  end
+
 
   private
 
