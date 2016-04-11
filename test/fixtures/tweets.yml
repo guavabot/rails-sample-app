@@ -27,3 +27,12 @@ tweet_<%= n %>:
   user: miguel
 <% end %>
 
+ants:
+  content: "Oh, is that what you want? Because that's how you get ants!"
+  created_at: <%= 2.years.ago %>
+  user: samuel
+
+zone:
+  content: "Danger zone!"
+  created_at: <%= 3.days.ago %>
+  user: samuel

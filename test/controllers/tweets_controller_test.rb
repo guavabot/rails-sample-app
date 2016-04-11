@@ -20,4 +20,13 @@ class TweetsControllerTest < ActionController::TestCase
     assert_redirected_to login_url
   end
 
+  test 'should redirect destroy for wrong tweet' do
+    log_in_as(users(:miguel))
+    tweet = tweets(:ants)
+    assert_no_difference 'Tweet.count' do
+      delete :destroy, id: tweet
+    end
+    assert_redirected_to root_url
+  end
+
 end
