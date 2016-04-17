@@ -11,3 +11,18 @@
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
+one:
+  follower: miguel
+  followed: chacho
+
+two:
+  follower: miguel
+  followed: lonely
+
+three:
+  follower: samuel
+  followed: miguel
+
+four:
+  follower: chacho
+  followed: miguel

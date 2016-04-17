@@ -27,7 +27,6 @@ miguel:
   activated: true
   activated_at: <%= Time.zone.now %>
 
-
 samuel:
   name: Samue Lin
   email: samuelin@example.com
@@ -38,6 +37,13 @@ samuel:
 lonely:
   name: Lone Li
   email: lonely@example.com
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+chacho:
+  name: El Mu
+  email: chacho@example.com
   password_digest: <%= User.digest('password') %>
   activated: true
   activated_at: <%= Time.zone.now %>
