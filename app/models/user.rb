@@ -96,7 +96,7 @@ class User < ActiveRecord::Base
 
   # Gets the feed of tweets for a user
   def feed
-    Tweet.where('user_id = ?', id)
+    Tweet.where('user_id IN (?) OR user_id = ?', following_ids, id)
   end
 
   def follow(other_user)

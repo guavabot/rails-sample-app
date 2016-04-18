@@ -111,4 +111,25 @@ class UserTest < ActiveSupport::TestCase
     assert_not miguel.following?(samuel)
   end
 
+  test 'feed should have the right posts' do
+    user = users(:miguel)
+    followed = users(:chacho)
+    not_followed = users(:samuel)
+
+    # Self posts
+    user.tweets.each do |self_post|
+      assert user.feed.include?(self_post)
+    end
+
+    # Followed posts
+    followed.tweets.each do |followed_post|
+      assert user.feed.include?(followed_post)
+    end
+
+    # Not followed posts
+    not_followed.tweets.each do |not_followed_post|
+      assert_not user.feed.include?(not_followed_post)
+    end
+  end
+
 end

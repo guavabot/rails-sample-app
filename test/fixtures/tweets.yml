@@ -48,3 +48,8 @@ zone:
   content: "Danger zone!"
   created_at: <%= 3.days.ago %>
   user: samuel
+
+madonna:
+  content: "Ma Donna!"
+  created_at: <%= 7.days.ago %>
+  user: chacho
